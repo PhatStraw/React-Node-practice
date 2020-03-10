@@ -1,28 +1,8 @@
 import React from 'react';
-import './App.css';
+import ReactDOM from 'react-dom';
 
-//Components
-import TweetForm from './components/tweetform.js'
-import AllTweets from './components/alltweets.js'
+import './styles/styles.css';
 
-class App extends React.Component{
-  // state ={
-  //   name: '',
-  //   tweet: ''
-  // }
+const template = <p>Hello from react</p>;
 
-  // onSubmit(e){
-  //   e.preventDefault()
-  //   url = fetch()
-  // }
-  render(){
-    return (
-      <div className="App">
-        <TweetForm />
-        <AllTweets />
-      </div>
-    );
-  }
-}
-
-export default App;
+ReactDOM.render(template, document.getElementById('root'));

@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ✔Webpack:
 
-## Available Scripts
+Its a module bundler which lets us bundle our project files into a single file.
+It requires a webpack.config.js file in the root folder. Where we tell our webpack how to work with our application by giving entry point information and also output information.
 
-In the project directory, you can run:
 
-### `yarn start`
+# ✔Babel:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Its a JavaScript compiler. Babel on its own actually has no functionality. Yeah its a compiler but its not going to compile anything by default. We have to add various pulgins and presets to add support particular language features. You can check this out by visiting Babel website. In babel website navigation bar section you will find Try It Out. Click on it and you will get a new window.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+# ✔Install & Configure Babel:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev
 
-### `yarn build`
+We already know about @babel/preset-env and @babel/preset-react. Now what is @babel/core and babel-loader.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    @babel/core :- It allows us to run babel from tools like webpack.
+    babel-loader :- Its a webpack plugin. It allows us to teach webpack how to run babel when webpack sees certain files.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Lets configure babel by creating a .babelrc file inside the root of the project directory with following contents inside of it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+# ✔Install DevServer:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Run this below command in the terminal.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install webpack-dev-server --save-dev
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# ✔Loading the Styles: 
 
-## Learn More
+To load our style.css file we need to setup new rules in webpack.config.js file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Before that we need to install some new loader.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm install css-loader style-loader --save-dev
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1.css-loader: Allows webpack to load our CSS assets.
+2.style-loader: Take CSS and adds it to the DOM by injecting a <style> tag.
