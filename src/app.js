@@ -6,15 +6,15 @@ import Center from './twitter/centerContent'
 const App = () => {
     return (
         <div className="main-container">
-            <div className="left">
+            <div id="left" className="main">
                 <Left />
             </div>
 
-            <div className="center">
+            <div id="center" className="main">
                 <Center />
             </div>
 
-            <div className="right">
+            <div id="right" className="main">
                 <Right />
             </div>
 

@@ -1,16 +1,20 @@
-import React from 'react'
-
+import React, {useState, useEffect} from 'react'
+import Card from './card.js'
 
 export default function Center() {
-    return (
-        <div>
-            <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-        </div>
-    )
+    const [tweets, setTweets] = useState([])
+
+    useEffect( () => {
+        fetch('http://localhost:3000/tweet/all')
+        .then(resp => resp.json())
+        .then(data=>{
+            console.log(data)
+            return setTweets(data)
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+    }, [])
+
+    return <Card tweets={tweets}/>
 }

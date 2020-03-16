@@ -1,8 +1,20 @@
-.left{
+#root{
+    height: 100%
+}
 
+html, body{
+    height: 100%;
+    width: 100%;
 }
 
 .main-container{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.main{
+    width: 33.33%;
+    height: 100%;
 }
