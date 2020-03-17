@@ -1,11 +1,11 @@
 import React from 'react'
 import '../styles/card.css'
 
-export default function Card({ tweets }) {
+export default function Card(props) {
     return (
         <div>
             {
-                tweets.map(tweet => (
+                props.data.tweets.map(tweet => (
                     <div class="card w-100" >
                         <div class="card-body">
                             <h5 class="card-title">{tweet.user_id}</h5>
