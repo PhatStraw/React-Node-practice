@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Card from './card.js'
+import CardComp from './card.js'
 
 export default function Center() {
     const [data, setData] = useState()
@@ -18,5 +18,5 @@ export default function Center() {
         })
     }, [])
 
-    return data ?  <Card data={data}/> : <div>loading</div>
+    return data ?  <CardComp data={data}/> : <div>loading</div>
 }

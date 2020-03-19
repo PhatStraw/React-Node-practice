@@ -2,6 +2,8 @@ import React from 'react'
 import Left from './twitter/leftSideBar'
 import Right from './twitter/rightSideBar'
 import Center from './twitter/centerContent'
+import './styles/app.css'
+
 
 const App = () => {
     return (

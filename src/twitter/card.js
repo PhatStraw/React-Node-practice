@@ -1,22 +1,23 @@
 import React from 'react'
+import { Card, Button, CardTitle, CardText } from 'reactstrap';
 import '../styles/card.css'
 
-export default function Card(props) {
+export default function CardComp(props) {
     return (
         <div>
             {
                 props.data.tweets.map(tweet => (
-                    <div class="card w-100" >
-                        <div class="card-body">
-                            <h5 class="card-title">{tweet.user_id}</h5>
-                            <p class="card-text">{tweet.tweet}</p>
-                            <div>
-                                <a href="#" id="t-util" class="btn btn-primary">Likes {tweet.likes}</a>
-                                <a href="#" id="t-util" class="btn btn-primary">Retweets {tweet.retweets}</a>
-                                <a href="#" id="t-util" class="btn btn-primary">Comments {tweet.comments}</a>
-                            </div>
+                    <Card body outline color="secondary">
+                        <CardTitle>{tweet.user_id}</CardTitle>
+                        <CardText>{tweet.tweet}</CardText>
+                        <div style={{display: 'flex', flexDirection: 'row'}}>
+                            <Button style={{margin: '10px', width: '20%', fontSize: '8px'}} color="primary">
+                                 Likes {tweet.likes}
+                            </Button>
+                            <Button style={{margin: '10px', width: '20%', fontSize: '8px'}} color="primary">Retweets   {tweet.retweets}</Button>
+                            <Button style={{margin: '10px', width: '20%', fontSize: '8px'}} color="primary">Comments   {tweet.comments}</Button>
                         </div>
-                    </div>
+                    </Card>
                 ))
             }
         </div>

@@ -18,3 +18,9 @@ html, body{
     width: 33.33%;
     height: 100%;
 }
+
+#left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
