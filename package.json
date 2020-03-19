@@ -39,6 +39,7 @@
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",
+    "react-icons": "^3.9.0",
     "reactstrap": "^8.4.1"
   }
 }
