@@ -9,7 +9,7 @@ export default function CardComp(props) {
             <div>
                 {
                     props.data.tweets.map(tweet => (
-                        <Card body outline color="secondary">
+                        <Card body outline style={{backgroundColor: "rgb(21, 32, 43)", color: "white"}}>
                             <CardTitle>{tweet.user_id}</CardTitle>
                             <CardText>{tweet.tweet}</CardText>
                             <div style={{ display: 'flex', flexDirection: 'row' }}>
