@@ -1,28 +1,17 @@
 import React from 'react'
-import Left from './twitter/leftSideBar'
-import Right from './twitter/rightSideBar'
-import Center from './twitter/centerContent'
-import './styles/app.css'
+// import Left from './twitter/leftSideBar'
+// import Right from './twitter/rightSideBar'
+// import Center from './twitter/centerContent'
+// import './styles/app.css'
+import Home from "./twitter/home.js"
+import Login from "./twitter/login.js"
+import { Router, Link } from "@reach/router"
 
-
-const App = () => {
-    return (
-        <div className="main-container">
-            <div id="left" className="main">
-                <Left />
-            </div>
-
-            <div id="center" className="main">
-                <Center />
-            </div>
-
-            <div id="right" className="main">
-                <Right />
-            </div>
-
-        </div>
-
-    )
-}
+const App = () => (
+  <Router>
+    <Home path="/" />
+    <Login path="login" />
+  </Router>
+)
 
 export default App
