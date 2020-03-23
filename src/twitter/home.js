@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Left from './leftSideBar'
 import Right from './rightSideBar'
 import Center from './centerContent'
@@ -23,6 +23,7 @@ const Home = () => {
         </div>
 
     )
+    
 }
 
 export default Home

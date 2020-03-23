@@ -5,7 +5,6 @@ import CardComp from './card.js'
 
 export default function Center() {
     const [data, setData] = useState()
-    const [user, setUser] = useState()
 
     useEffect(() => {
         fetch('http://localhost:3000/tweet/all')
