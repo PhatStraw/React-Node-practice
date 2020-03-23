@@ -6,7 +6,7 @@ export default function CardComp(props) {
     return (
         <div>
             {
-                props.data.tweets.map(tweet => (
+                props.data.tweets.slice(0).reverse().map(tweet => (
                     <Card body outline style={{ backgroundColor: "rgb(21, 32, 43)", color: "white", border: "1px solid rgb(56, 68, 77)" }}>
                         <CardTitle>{tweet.user_id}</CardTitle>
                         <CardText>{tweet.tweet}</CardText>
